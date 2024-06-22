@@ -27,11 +27,11 @@ def download_video():
             mp4_streams = yt.streams.filter(file_extension='mp4').all()
             d_video = mp4_streams[-1]
             d_video.download(output_path=SAVE_PATH)
-            messagebox.showinfo("Success", "Video Downloaded successfully!")
+            messagebox.showinfo("Success", "Video Downloaded successfully! File created in C: drive named 'YouTube Downloader'.")
         elif download_option.get() == 2:
             audio_stream = yt.streams.filter(only_audio=True).first()
             audio_stream.download(output_path=SAVE_PATH)
-            messagebox.showinfo("Success", "Audio Downloaded successfully!")
+            messagebox.showinfo("Success", "Audio Downloaded successfully! File created in C: drive named 'YouTube Downloader'.")
         else:
             messagebox.showerror("Error", "Please select an option!")
 
